@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zameer Mahfooz Khan — Full-Stack Developer & Designer</title>
+  <meta name="description" content="Portfolio of Zameer Mahfooz Khan — B.Tech Computer Science, Full-Stack Developer, Designer & Creator. Exploring skills, education, and professional projects." />
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="theme-color" content="#0F0A05" />
+  <meta property="og:title" content="Zameer Mahfooz Khan — Full-Stack Developer" />
+  <meta property="og:description" content="Crafting immersive digital experiences with clean code and thoughtful design. Check out my education, skills, and client projects." />
+  <meta property="og:image" content="avatar.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Zameer Mahfooz Khan — Full-Stack Developer" />
+  <meta name="twitter:description" content="Crafting immersive digital experiences with clean code and thoughtful design. Check out my education, skills, and client projects." />
+  <meta name="twitter:image" content="avatar.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Animated BG Blobs -->
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+  <div class="bg-blob blob-3"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">zameer<span class="dot">.</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="Zameer_Resume.pdf" class="btn-cv-nav" download="Zameer_Resume.pdf">
+        <span>Download CV</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </a>
+      <a href="#contact" class="btn-hire">Hire Me →</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for work
+      </div>
+      <p class="hero-greeting">Hey, I am <span class="highlight">Zameer</span></p>
+      <h1 class="hero-title">
+        <span class="title-line">Full‑Stack</span>
+        <span class="title-line accent">Developer</span>
+      </h1>
+      <p class="hero-description">
+        Crafting immersive digital experiences with clean code and thoughtful design. Passionate about building products that make a difference.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          <span>View Work</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="Zameer_Resume.pdf" class="btn-secondary" download="Zameer_Resume.pdf">
+          <span>Download CV</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+        <a href="#contact" class="btn-secondary">Contact Me</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Years Exp.</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">40+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">20+</span>
+          <span class="stat-label">Clients</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avatar / Placeholder -->
+    <div class="hero-visual">
+      <div class="avatar-ring outer-ring"></div>
+      <div class="avatar-ring mid-ring"></div>
+      <div class="avatar-container" id="avatarContainer">
+        <img src="avatar.png" alt="Zameer Mahfooz Khan — Full-Stack Developer" class="avatar-img" fetchpriority="high" decoding="async" />
+      </div>
+
+      <!-- Floating Tech Badges -->
+      <div class="float-badge badge-react" style="--delay:0s">
+        <svg viewBox="0 0 24 24" fill="#61DAFB"><path d="M12 10.11c1.03 0 1.87.84 1.87 1.89 0 1-.84 1.85-1.87 1.85-1.03 0-1.87-.85-1.87-1.85 0-1.05.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9a22.7 22.7 0 01-2.4-.36c-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86.27.06.57.11.88.16l-.3-.51m6.54-.76l.81-1.5-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9c-.6 0-1.17 0-1.71.03-.29.47-.61.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47.54.03 1.11.03 1.71.03.6 0 1.17 0 1.71-.03.29-.47.61-.94.91-1.47m2.07-7.25c.65.37.85 1.84.31 3.96a22.7 22.7 0 01-2.4.36c-.48.67-.99 1.31-1.51 1.9 1.59 1.5 2.97 2.08 3.6 1.7.64-.35.83-1.82.32-3.96l-.32.06m-.7 5.74l-.3.51c.31-.05.61-.1.88-.16-.07-.28-.18-.57-.29-.86l-.29.51m1.45-7.05c.52.59 1.03 1.23 1.51 1.9.87-.13 1.69-.29 2.4-.36.51-2.14.32-3.61-.31-3.96-.63-.38-2.01.2-3.6 1.42m-6.7 0C9.29 4.6 7.91 4.02 7.28 4.4c-.63.35-.82 1.82-.31 3.96.71.07 1.53.23 2.4.36.48-.67.99-1.31 1.51-1.9M12 6.78c-.19.22-.39.45-.59.68.19 0 .39-.01.59-.01.2 0 .4.01.59.01-.2-.23-.4-.46-.59-.68m0 10.44c.19-.22.39-.45.59-.68-.19 0-.39.01-.59.01-.2 0-.4-.01-.59-.01.2.23.4.46.59.68"/></svg>
+        React
+      </div>
+      <div class="float-badge badge-js" style="--delay:0.4s">
+        <svg viewBox="0 0 24 24" fill="#F7DF1E"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51.074-.707.179-.195.539-.293.995-.228.435.067.876.27 1.195.668l1.126-.732c-.428-.614-.931-.925-1.587-1.05-.636-.125-1.311-.04-1.786.27-1.226.737-1.555 2.194-1.043 3.365.422 1.01 1.383 1.628 2.643 1.963.68.177 1.113.453 1.237.871.128.437-.088.868-.574 1.055-.51.198-1.147.154-1.611-.134a2.87 2.87 0 01-.978-1.011l-1.171.78c.245.46.604.87 1.031 1.133.832.498 1.96.623 3.106.316.98-.267 1.726-.984 1.924-2.064zm-9.763 1.14c-.314.618-.935.836-1.574.714-.606-.118-.995-.477-1.218-.951l-1.168.764c.381.776 1.057 1.352 1.895 1.566.837.215 1.73.054 2.368-.394.576-.41.962-1.069 1.115-1.851l.042-5.95H11.25l-.02 5.23v.068l.041-.196z"/></svg>
+        JavaScript
+      </div>
+      <div class="float-badge badge-node" style="--delay:0.8s">
+        <svg viewBox="0 0 24 24" fill="#339933"><path d="M11.998.016C5.375.016 0 5.393 0 12.018c0 6.624 5.375 12 11.998 12 6.624 0 12-5.376 12-12C23.998 5.393 18.622.016 11.998.016zm-.528 18.27a.529.529 0 01-.265-.071l-.843-.5c-.126-.071-.064-.096-.023-.111.168-.059.202-.072.381-.174.019-.011.044-.007.063.005l.648.384c.024.013.057.013.079 0l2.523-1.457a.08.08 0 00.04-.069V9.775a.08.08 0 00-.04-.07l-2.522-1.455a.079.079 0 00-.08 0L8.908 9.705a.08.08 0 00-.04.07v2.913c0 .028.015.054.04.068l.691.399c.374.188.604-.033.604-.255V9.99c0-.041.033-.073.074-.073h.322c.04 0 .073.032.073.073v2.91c0 .499-.271.786-.743.786-.145 0-.259 0-.577-.157l-.663-.381a.531.531 0 01-.265-.459V9.775c0-.189.101-.365.265-.459l2.524-1.458a.554.554 0 01.529 0l2.524 1.458c.164.094.265.27.265.459v2.913c0 .189-.101.365-.265.459l-2.524 1.458a.528.528 0 01-.265.071z"/></svg>
+        Node.js
+      </div>
+      <div class="float-badge badge-python" style="--delay:1.2s">
+        <svg viewBox="0 0 24 24" fill="#3776AB"><path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.963 3.403 5.963h2.031v-2.869s-.109-3.402 3.35-3.402h5.769s3.24.052 3.24-3.131V3.199S18.28 0 11.914 0zm-3.22 1.856a1.044 1.044 0 011.045 1.045 1.044 1.044 0 01-1.045 1.045 1.044 1.044 0 01-1.045-1.045 1.044 1.044 0 011.045-1.045zM24 12.031c0-6.18-3.403-5.963-3.403-5.963h-2.031v2.869s.109 3.402-3.35 3.402H9.447s-3.24-.052-3.24 3.131v5.301S5.72 24 12.086 24c6.366 0 5.985-2.656 5.985-2.656l-.007-2.752H12.25v-.826h8.121S24 18.211 24 12.031zm-8.694 10.113a1.044 1.044 0 01-1.045-1.045 1.044 1.044 0 011.045-1.045 1.044 1.044 0 011.045 1.045 1.044 1.044 0 01-1.045 1.045z"/></svg>
+        Python
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-wheel"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills-section" id="skills">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">What I do</span>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+        <p class="section-subtitle">A curated set of technologies I work with to bring ideas to life.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card" data-tilt>
+          <div class="skill-icon-wrap" style="--c:#61DAFB">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.11c1.03 0 1.87.84 1.87 1.89 0 1-.84 1.85-1.87 1.85-1.03 0-1.87-.85-1.87-1.85 0-1.05.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9a22.7 22.7 0 01-2.4-.36c-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86.27.06.57.11.88.16l-.3-.51m6.54-.76l.81-1.5-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9c-.6 0-1.17 0-1.71.03-.29.47-.61.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47.54.03 1.11.03 1.71.03.6 0 1.17 0 1.71-.03.29-.47.61-.94.91-1.47m2.07-7.25c.65.37.85 1.84.31 3.96a22.7 22.7 0 01-2.4.36c-.48.67-.99 1.31-1.51 1.9 1.59 1.5 2.97 2.08 3.6 1.7.64-.35.83-1.82.32-3.96l-.32.06m-.7 5.74l-.3.51c.31-.05.61-.1.88-.16-.07-.28-.18-.57-.29-.86l-.29.51m1.45-7.05c.52.59 1.03 1.23 1.51 1.9.87-.13 1.69-.29 2.4-.36.51-2.14.32-3.61-.31-3.96-.63-.38-2.01.2-3.6 1.42m-6.7 0C9.29 4.6 7.91 4.02 7.28 4.4c-.63.35-.82 1.82-.31 3.96.71.07 1.53.23 2.4.36.48-.67.99-1.31 1.51-1.9M12 6.78c-.19.22-.39.45-.59.68.19 0 .39-.01.59-.01.2 0 .4.01.59.01-.2-.23-.4-.46-.59-.68m0 10.44c.19-.22.39-.45.59-.68-.19 0-.39.01-.59.01-.2 0-.4-.01-.59-.01.2.23.4.46.59.68"/></svg>
+          </div>
+          <h3 class="skill-name">React.js</h3>
+          <p class="skill-desc">Building dynamic UIs with hooks, context, and modern patterns.</p>
+          <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+          <span class="skill-pct">90%</span>
+        </div>
+
+        <div class="skill-card" data-tilt>
+          <div class="skill-icon-wrap" style="--c:#F7DF1E">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51.074-.707.179-.195.539-.293.995-.228.435.067.876.27 1.195.668l1.126-.732c-.428-.614-.931-.925-1.587-1.05-.636-.125-1.311-.04-1.786.27-1.226.737-1.555 2.194-1.043 3.365.422 1.01 1.383 1.628 2.643 1.963.68.177 1.113.453 1.237.871.128.437-.088.868-.574 1.055-.51.198-1.147.154-1.611-.134a2.87 2.87 0 01-.978-1.011l-1.171.78c.245.46.604.87 1.031 1.133.832.498 1.96.623 3.106.316.98-.267 1.726-.984 1.924-2.064zm-9.763 1.14c-.314.618-.935.836-1.574.714-.606-.118-.995-.477-1.218-.951l-1.168.764c.381.776 1.057 1.352 1.895 1.566.837.215 1.73.054 2.368-.394.576-.41.962-1.069 1.115-1.851l.042-5.95H11.25l-.02 5.23v.068l.041-.196z"/></svg>
+          </div>
+          <h3 class="skill-name">JavaScript</h3>
+          <p class="skill-desc">ES6+, async/await, functional programming & DOM mastery.</p>
+          <div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div>
+          <span class="skill-pct">92%</span>
+        </div>
+
+        <div class="skill-card" data-tilt>
+          <div class="skill-icon-wrap" style="--c:#339933">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.998.016C5.375.016 0 5.393 0 12.018c0 6.624 5.375 12 11.998 12 6.624 0 12-5.376 12-12C23.998 5.393 18.622.016 11.998.016zm-.528 18.27a.529.529 0 01-.265-.071l-.843-.5c-.126-.071-.064-.096-.023-.111.168-.059.202-.072.381-.174.019-.011.044-.007.063.005l.648.384c.024.013.057.013.079 0l2.523-1.457a.08.08 0 00.04-.069V9.775a.08.08 0 00-.04-.07l-2.522-1.455a.079.079 0 00-.08 0L8.908 9.705a.08.08 0 00-.04.07v2.913c0 .028.015.054.04.068l.691.399c.374.188.604-.033.604-.255V9.99c0-.041.033-.073.074-.073h.322c.04 0 .073.032.073.073v2.91c0 .499-.271.786-.743.786-.145 0-.259 0-.577-.157l-.663-.381a.531.531 0 01-.265-.459V9.775c0-.189.101-.365.265-.459l2.524-1.458a.554.554 0 01.529 0l2.524 1.458c.164.094.265.27.265.459v2.913c0 .189-.101.365-.265.459l-2.524 1.458a.528.528 0 01-.265.071z"/></svg>
+          </div>
+          <h3 class="skill-name">Node.js</h3>
+          <p class="skill-desc">REST APIs, microservices, real-time apps with Express & Socket.io.</p>
+          <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+          <span class="skill-pct">85%</span>
+        </div>
+
+        <div class="skill-card" data-tilt>
+          <div class="skill-icon-wrap" style="--c:#3776AB">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.963 3.403 5.963h2.031v-2.869s-.109-3.402 3.35-3.402h5.769s3.24.052 3.24-3.131V3.199S18.28 0 11.914 0zm-3.22 1.856a1.044 1.044 0 011.045 1.045 1.044 1.044 0 01-1.045 1.045 1.044 1.044 0 01-1.045-1.045 1.044 1.044 0 011.045-1.045zM24 12.031c0-6.18-3.403-5.963-3.403-5.963h-2.031v2.869s.109 3.402-3.35 3.402H9.447s-3.24-.052-3.24 3.131v5.301S5.72 24 12.086 24c6.366 0 5.985-2.656 5.985-2.656l-.007-2.752H12.25v-.826h8.121S24 18.211 24 12.031zm-8.694 10.113a1.044 1.044 0 01-1.045-1.045 1.044 1.044 0 011.045-1.045 1.044 1.044 0 011.045 1.045 1.044 1.044 0 01-1.045 1.045z"/></svg>
+          </div>
+          <h3 class="skill-name">Python</h3>
+          <p class="skill-desc">Data processing, automation, Django & Flask backend services.</p>
+          <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+          <span class="skill-pct">78%</span>
+        </div>
+
+        <div class="skill-card" data-tilt>
+          <div class="skill-icon-wrap" style="--c:#FF6B35">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>
+          </div>
+          <h3 class="skill-name">HTML / CSS</h3>
+          <p class="skill-desc">Pixel-perfect responsive layouts, animations & modern CSS features.</p>
+          <div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div>
+          <span class="skill-pct">95%</span>
+        </div>
+
+        <div class="skill-card" data-tilt>
+          <div class="skill-icon-wrap" style="--c:#47A248">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.193 9.555c-1.264-5.58-4.252-7.243-4.798-8.135-.36-.394-.53-.54-.653-.689-.125-.15-.16-.218-.187-.453-.042-.3.198-.724.208-1.074-.022-.125-.273-.177-.44-.1-.168.076-.336.265-.463.435-.128.171-.176.346-.204.534-.028.19-.01.401-.054.613a2.056 2.056 0 01-.19.552c-.1.187-.227.35-.37.49-.143.142-.315.265-.498.374-.364.217-.774.38-1.175.537-.4.158-.8.312-1.18.504-.382.192-.742.417-1.054.693-.314.276-.58.605-.787.97-.206.367-.35.775-.407 1.198-.056.425-.023.866.058 1.29.08.423.218.83.416 1.204.197.374.452.716.755.997.301.28.652.496 1.028.638.375.14.773.205 1.173.189.4-.016.796-.112 1.162-.274.365-.162.698-.39.982-.665.283-.275.516-.596.69-.946a3.19 3.19 0 00.27-1.099c.022-.39-.036-.783-.172-1.147-.136-.364-.35-.697-.617-.974-.267-.278-.584-.497-.926-.64-.34-.14-.703-.2-1.062-.172a2.41 2.41 0 00-1.032.3c-.304.176-.561.42-.752.71-.19.29-.31.622-.35.97a1.91 1.91 0 00.115.946c.15.305.38.566.66.763.28.197.608.327.948.375.34.048.688.01 1.01-.113.32-.122.608-.319.838-.572.23-.252.396-.558.483-.886.086-.327.094-.673.02-1.003a2.025 2.025 0 00-.42-.87c-.207-.24-.47-.428-.763-.546a2.08 2.08 0 00-.93-.118c-.319.035-.626.145-.895.32-.27.174-.496.41-.66.685-.164.275-.26.585-.283.905-.023.32.026.645.143.944.118.3.302.57.537.786.234.217.515.376.818.463.302.086.622.099.93.035.307-.064.6-.198.855-.39.254-.19.462-.436.608-.715.146-.28.227-.59.239-.907.013-.316-.044-.634-.167-.929a2.527 2.527 0 00-.514-.783c-.23-.22-.507-.387-.807-.487a2.552 2.552 0 00-.94-.1c-.32.028-.631.13-.91.299-.28.168-.52.4-.704.674-.183.274-.303.59-.353.918-.05.327-.03.662.06.977.088.315.246.607.463.853.217.246.487.44.786.567.3.128.626.189.95.177.323-.013.64-.097.926-.246a2.27 2.27 0 00.714-.614c.186-.254.313-.547.37-.853.056-.306.044-.623-.037-.924a2.245 2.245 0 00-.395-.79 2.25 2.25 0 00-.682-.555 2.254 2.254 0 00-.873-.215c-.306-.01-.61.056-.888.193-.278.137-.524.337-.717.585-.193.249-.326.54-.388.847-.06.307-.05.625.033.926.082.302.23.583.428.822.198.238.444.43.72.563.275.132.578.2.883.2z"/></svg>
+          </div>
+          <h3 class="skill-name">MongoDB</h3>
+          <p class="skill-desc">NoSQL data modeling, aggregation pipelines & Atlas cloud.</p>
+          <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+          <span class="skill-pct">80%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section experience-section" id="education">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Academics</span>
+        <h2 class="section-title">My <span class="accent">Education</span></h2>
+        <p class="section-subtitle">The academic journey that built my foundation.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">2024 – 2028</span>
+              <span class="timeline-badge current">Ongoing</span>
+            </div>
+            <h3 class="timeline-role">Bachelor of Technology — Computer Science</h3>
+            <span class="timeline-company">Kamla Nehru Institute of Physical and Social Science (KNIPSS), Sultanpur</span>
+            <p class="timeline-desc">Pursuing a 4-year undergraduate degree in Computer Science, building expertise in software engineering, data structures, algorithms, and full-stack web development.</p>
+            <div class="timeline-tags">
+              <span>B.Tech</span><span>Computer Science</span><span>2024–2028</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">2023 – 2024</span>
+            </div>
+            <h3 class="timeline-role">Class 12th — Intermediate</h3>
+            <span class="timeline-company">MJS Academy, Ayodhya</span>
+            <p class="timeline-desc">Completed senior secondary education, strengthening analytical thinking and problem-solving skills.</p>
+            <div class="timeline-tags">
+              <span>Intermediate</span><span>Class 12th</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">2021 – 2022</span>
+            </div>
+            <h3 class="timeline-role">Class 10th — High School</h3>
+            <span class="timeline-company">Innovative Minds Academy, Ayodhya</span>
+            <p class="timeline-desc">Completed secondary education with a strong academic record, sparking an early interest in technology and programming.</p>
+            <div class="timeline-tags">
+              <span>High School</span><span>Class 10th</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects-section" id="projects">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+        <p class="section-subtitle">Hand-picked projects that demonstrate my capabilities.</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card featured reveal">
+          <div class="project-glow"></div>
+          <div class="project-number">01</div>
+          <div class="project-info">
+            <h3 class="project-title">7070 Sports Ayodhya</h3>
+            <p class="project-desc">A fully functional e-commerce platform for a sports goods store, featuring product listings, a shopping experience, and a clean responsive UI built from scratch.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>E-Commerce</span>
+            </div>
+            <div class="project-links">
+              <a href="https://7070sportsayodhya.com/" target="_blank" rel="noopener" class="proj-link live">Live →</a>
+              <a href="https://github.com/ZameerMahfoozkhan/7070" target="_blank" rel="noopener" class="proj-link github">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card featured reveal">
+          <div class="project-glow"></div>
+          <div class="project-number">02</div>
+          <div class="project-info">
+            <h3 class="project-title">Little Flower School, Ayodhya</h3>
+            <p class="project-desc">A complete school website for Little Flower School, Kalyan Bhadarsa, Ayodhya — featuring admissions info, campus gallery, notice board, faculty details, and a contact system. Built with a clean, professional UI for an English medium CISCE-affiliated institution.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Vercel</span>
+            </div>
+            <div class="project-links">
+              <a href="https://lfs-two.vercel.app/" target="_blank" rel="noopener" class="proj-link live">Live →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card featured reveal">
+          <div class="project-glow"></div>
+          <div class="project-number">03</div>
+          <div class="project-info">
+            <h3 class="project-title">Anufix — Fabrication Services</h3>
+            <p class="project-desc">A professional business website for Anufix, an MSME-registered metal fabrication company in Noida. Features service listings, gallery, SEO optimization, Google Analytics integration, and a call-to-action driven design to generate leads.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>SEO</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.anufix.com/" target="_blank" rel="noopener" class="proj-link live">Live →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section" id="contact">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Get in touch</span>
+        <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
+        <p class="section-subtitle">Have a project in mind? I'd love to hear about it.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <h4>Email</h4>
+            <a href="mailto:zameermahfoozkhan@gmail.com">zameermahfoozkhan@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <h4>Location</h4>
+            <span>India</span>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">💼</div>
+            <h4>LinkedIn</h4>
+            <a href="https://www.linkedin.com/in/zameer-mahfooz-khan-373313303/" target="_blank" rel="noopener">linkedin.com/in/zameer-mahfooz-khan</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">🐙</div>
+            <h4>GitHub</h4>
+            <a href="https://github.com/ZameerMahfoozkhan" target="_blank" rel="noopener">github.com/ZameerMahfoozkhan</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span>Send Message</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">zameer<span class="dot">.</span></div>
+      <p class="footer-copy">© 2025 Zameer Mahfooz Khan. Crafted with passion.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/ZameerMahfoozkhan" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/zameer-mahfooz-khan-373313303/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/web_by_zam" target="_blank" rel="noopener" aria-label="Instagram" class="social-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
