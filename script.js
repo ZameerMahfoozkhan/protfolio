@@ -52,7 +52,7 @@ navLinks.querySelectorAll('.nav-link').forEach(link => {
    ACTIVE NAV LINK
 =========================== */
 function updateActiveNavLink() {
-  const sections = ['home','skills','education','projects','contact'];
+  const sections = ['home','about','skills','education','projects','contact'];
   let current = '';
   sections.forEach(id => {
     const el = document.getElementById(id);
@@ -100,7 +100,33 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.reveal, .timeline-item, .project-card').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.reveal, .timeline-item, .project-card:not(.project-hidden)').forEach(el => revealObserver.observe(el));
+
+/* ===========================
+   SHOW MORE PROJECTS TOGGLE
+=========================== */
+const showMoreBtn = document.getElementById('showMoreProjects');
+if (showMoreBtn) {
+  let expanded = false;
+  showMoreBtn.addEventListener('click', () => {
+    expanded = !expanded;
+    const hiddenCards = document.querySelectorAll('.project-hidden');
+    hiddenCards.forEach((card, i) => {
+      if (expanded) {
+        card.classList.add('project-visible');
+        // Trigger reveal animation with stagger
+        setTimeout(() => {
+          card.classList.add('visible');
+          revealObserver.observe(card);
+        }, i * 150);
+      } else {
+        card.classList.remove('project-visible', 'visible');
+      }
+    });
+    showMoreBtn.classList.toggle('expanded', expanded);
+    showMoreBtn.querySelector('span').textContent = expanded ? 'Show Less' : 'Show More Projects';
+  });
+}
 
 /* ===========================
    SECTION HEADER REVEAL
@@ -168,23 +194,38 @@ setTimeout(typeEffect, 1200);
 const form      = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async e => {
   e.preventDefault();
   submitBtn.innerHTML = `<span>Sending…</span>`;
   submitBtn.style.opacity = '0.7';
   submitBtn.disabled = true;
 
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      submitBtn.innerHTML = `<span>✓ Message Sent!</span>`;
+      submitBtn.style.background = 'linear-gradient(135deg,#22C55E,#16A34A)';
+      form.reset();
+    } else {
+      submitBtn.innerHTML = `<span>✗ Failed — Try Again</span>`;
+      submitBtn.style.background = 'linear-gradient(135deg,#EF4444,#DC2626)';
+    }
+  } catch (err) {
+    submitBtn.innerHTML = `<span>✗ Network Error</span>`;
+    submitBtn.style.background = 'linear-gradient(135deg,#EF4444,#DC2626)';
+  }
+
   setTimeout(() => {
-    submitBtn.innerHTML = `<span>✓ Message Sent!</span>`;
-    submitBtn.style.background = 'linear-gradient(135deg,#22C55E,#16A34A)';
-    form.reset();
-    setTimeout(() => {
-      submitBtn.innerHTML = `<span>Send Message</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>`;
-      submitBtn.style.background = '';
-      submitBtn.style.opacity = '1';
-      submitBtn.disabled = false;
-    }, 2800);
-  }, 1400);
+    submitBtn.innerHTML = `<span>Send Message</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>`;
+    submitBtn.style.background = '';
+    submitBtn.style.opacity = '1';
+    submitBtn.disabled = false;
+  }, 2800);
 });
 
 /* ===========================

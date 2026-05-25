@@ -38,6 +38,7 @@
     <div class="nav-logo">zameer<span class="dot">.</span></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
       <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
       <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
       <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
@@ -130,6 +131,96 @@
     <div class="scroll-indicator">
       <div class="scroll-wheel"></div>
       <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="section about-section" id="about">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Who I am</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <p class="section-subtitle">A quick glimpse into who I am beyond the code.</p>
+      </div>
+
+      <div class="about-layout">
+        <!-- Left: Decorative code visual -->
+        <div class="about-visual reveal">
+          <div class="about-code-window">
+            <div class="code-window-header">
+              <span class="code-dot red"></span>
+              <span class="code-dot yellow"></span>
+              <span class="code-dot green"></span>
+              <span class="code-window-title">zameer.js</span>
+            </div>
+            <div class="code-window-body">
+              <pre><code><span class="code-kw">const</span> <span class="code-var">zameer</span> = {
+  <span class="code-key">name</span>: <span class="code-str">"Zameer Mahfooz Khan"</span>,
+  <span class="code-key">role</span>: <span class="code-str">"Full-Stack Developer"</span>,
+  <span class="code-key">location</span>: <span class="code-str">"India 🇮🇳"</span>,
+  <span class="code-key">education</span>: <span class="code-str">"B.Tech CS"</span>,
+  <span class="code-key">passions</span>: [
+    <span class="code-str">"Clean Code"</span>,
+    <span class="code-str">"UI/UX Design"</span>,
+    <span class="code-str">"Open Source"</span>,
+  ],
+  <span class="code-key">currentlyLearning</span>: <span class="code-str">"AI & Cloud"</span>,
+  <span class="code-fn">hireable</span>: () => <span class="code-bool">true</span>,
+};</code></pre>
+            </div>
+          </div>
+          <div class="about-glow"></div>
+        </div>
+
+        <!-- Right: Text content -->
+        <div class="about-content reveal">
+          <h3 class="about-headline">
+            I'm <span class="about-name">Zameer</span> — a self-taught developer turning ideas into pixel-perfect, performant digital experiences.
+          </h3>
+          <p class="about-bio">
+            Currently pursuing a B.Tech in Computer Science, I've spent the last 3+ years immersed in the world of web development — from crafting small landing pages to shipping full-scale e-commerce platforms and school management systems for real clients. I believe great software lives at the intersection of <strong>clean code</strong>, <strong>thoughtful design</strong>, and <strong>genuine empathy for users</strong>.
+          </p>
+
+          <div class="about-highlights">
+            <div class="about-highlight-card">
+              <div class="about-hl-icon">🚀</div>
+              <div class="about-hl-info">
+                <span class="about-hl-number">3+</span>
+                <span class="about-hl-label">Years building for the web</span>
+              </div>
+            </div>
+            <div class="about-highlight-card">
+              <div class="about-hl-icon">🎯</div>
+              <div class="about-hl-info">
+                <span class="about-hl-number">20+</span>
+                <span class="about-hl-label">Happy clients served</span>
+              </div>
+            </div>
+            <div class="about-highlight-card">
+              <div class="about-hl-icon">☕</div>
+              <div class="about-hl-info">
+                <span class="about-hl-number">∞</span>
+                <span class="about-hl-label">Cups of chai consumed</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="about-closing">
+            When I'm not coding, you'll find me exploring new tech, contributing to open-source, or hunting for the perfect UI animation. I'm always open to exciting collaborations — let's build something amazing together.
+          </p>
+
+          <div class="about-actions">
+            <a href="#contact" class="btn-primary">
+              <span>Let's Talk</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="Zameer_Resume.pdf" class="btn-secondary" download="Zameer_Resume.pdf">
+              <span>My Resume</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -302,11 +393,12 @@
             </div>
             <div class="project-links">
               <a href="https://lfs-two.vercel.app/" target="_blank" rel="noopener" class="proj-link live">Live →</a>
+              <a href="https://github.com/ZameerMahfoozkhan/lfs" target="_blank" rel="noopener" class="proj-link github">GitHub</a>
             </div>
           </div>
         </div>
 
-        <div class="project-card featured reveal">
+        <div class="project-card featured reveal project-hidden">
           <div class="project-glow"></div>
           <div class="project-number">03</div>
           <div class="project-info">
@@ -317,9 +409,33 @@
             </div>
             <div class="project-links">
               <a href="https://www.anufix.com/" target="_blank" rel="noopener" class="proj-link live">Live →</a>
+              <a href="https://github.com/ZameerMahfoozkhan/anufix" target="_blank" rel="noopener" class="proj-link github">GitHub</a>
             </div>
           </div>
         </div>
+
+        <div class="project-card featured reveal project-hidden">
+          <div class="project-glow"></div>
+          <div class="project-number">04</div>
+          <div class="project-info">
+            <h3 class="project-title">24x7 Customer Service</h3>
+            <p class="project-desc">A comprehensive customer service portal providing 24/7 support solutions. Features a modern, user-friendly interface with service categories, support request system, and responsive design for seamless access across all devices.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Support Portal</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.24x7customer-service.co.in/" target="_blank" rel="noopener" class="proj-link live">Live →</a>
+              <a href="https://github.com/ZameerMahfoozkhan/24-7coustomer-service.co.in" target="_blank" rel="noopener" class="proj-link github">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-toggle-wrap">
+        <button class="btn-show-more" id="showMoreProjects">
+          <span>Show More Projects</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
       </div>
     </div>
   </section>
@@ -357,7 +473,7 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/maqkpygn" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Full Name</label>
