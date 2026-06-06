@@ -177,7 +177,7 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: -3px; margin-bottom: 24px;
   animation: fadeInDown 0.8s 0.2s both;
 }
-.title-line { display: block; }
+.title-line { display: block; min-height: 1.05em; white-space: nowrap; }
 .title-line.accent {
   background: linear-gradient(135deg, var(--orange) 0%, #FFD700 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
